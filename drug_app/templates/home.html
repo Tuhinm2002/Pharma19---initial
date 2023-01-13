@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel = "stylesheet" href = "static/custom1.css">
+    <link rel = "stylesheet" href = "static/custom3.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#2E423B" text="white">
+    
+    <nav>
+        <div id="home1"><ul><li><a href="">Pharma19.AI</a></li></ul></div>
+        <div id="home1"><ul><li><a href="/">Home</a></li></ul></div>
+    <div id="links"><ul><li><a href="output.html">Output</a></li></ul></div>
+    </nav>
+    <div class="input_form">
+        <form class = "container" action="" method="post" enctype = "multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name= "file" class="uploader">
+            <button type ="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
